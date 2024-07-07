@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { CounterState } from "./";
 
 export type CounterStateRedux = CounterState & {
-    dispatch: (args: any) => void;
+    dispatch: (args: never) => void;
 }
 
 export const reduxStoreType = { increase: 'INCREASE', decrease: 'DECREASE' } as const;
@@ -20,5 +20,5 @@ const reducer = (state: CounterState, { type }: { type: ActionType }) => {
 
 export const useCounterStoreRedux = create<CounterStateRedux>((set) => ({
   counter: 0,
-  dispatch: (args: any) => set((state: CounterState) => reducer(state, args)),
+  dispatch: (args: never) => set((state: CounterState) => reducer(state, args)),
 }));
