@@ -20,13 +20,13 @@ export default function Global() {
 
         <div className="flex space-x-4">
           <button
-            onClick={() => dispatch({ type: reduxStoreType.decrease })}
+            onClick={() => dispatch({ type: reduxStoreType.decrement })}
             className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
           >
             Decrement
           </button>
           <button
-            onClick={() => dispatch({ type: reduxStoreType.increase })}
+            onClick={() => dispatch({ type: reduxStoreType.increment })}
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
           >
             Increment
