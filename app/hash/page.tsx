@@ -1,15 +1,8 @@
 "use client";
 
 import { useCounterStoreHash } from "@/store";
-import { useEffect, useState } from "react";
 
 export default function Hash() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   const counter = useCounterStoreHash((state) => state.counter);
   const increment = useCounterStoreHash((state) => state.increment);
   const decrement = useCounterStoreHash((state) => state.decrement);
@@ -21,11 +14,9 @@ export default function Hash() {
       </h1>
 
       <div className="bg-white rounded-lg shadow-lg p-8">
-        {isClient ? (
-          <h3 className="text-2xl text-black font-semibold mb-4">
-            Counter: {counter}
-          </h3>
-        ) : null}
+        <h3 className="text-2xl text-black font-semibold mb-4">
+          Counter: {counter}
+        </h3>
 
         <div className="flex space-x-4">
           <button
