@@ -1,7 +1,7 @@
 "use client";
 
 import { useCounterStoreRedux } from "@/store";
-import { CounterStateRedux, reduxStoreType } from "@/store/redux";
+import { CounterStateRedux, reduxStoreType } from "@/store/global";
 
 export default function Global() {
   const counter = useCounterStoreRedux((state) => state.counter);

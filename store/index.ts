@@ -1,5 +1,5 @@
 import useCounterStoreSimple from "./simple";
-import { useCounterStoreRedux } from "./redux";
+import { useCounterStoreRedux } from "./global";
 import { useCounterStoreHash } from "./urlHash";
 
 export interface CounterState {

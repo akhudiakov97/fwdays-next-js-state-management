@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { CounterState } from "./";
+import { CounterState } from ".";
 
 export type CounterStateRedux = CounterState & {
     dispatch: (args: any) => void;
